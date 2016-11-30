@@ -11,10 +11,10 @@
 --
 -- INSERT INTO pizzas (name)
 -- VALUES ('hawaiian');
---
+
 -- INSERT INTO pizzas (name)
 -- VALUES ('chicken alfredo');
---
+
 -- INSERT INTO pizzas (name)
 -- VALUES ('margherita');
 --
@@ -45,44 +45,51 @@
 --
 -- INSERT INTO toppings (name)
 -- VALUES ('cheese');
---
+
 -- INSERT INTO toppings (name)
 -- VALUES ('red sauce');
---
+
 -- INSERT INTO toppings (name)
 -- VALUES ('chicken');
---
+
 -- INSERT INTO toppings (name)
 -- VALUES ('white sauce');
---
+
 -- INSERT INTO toppings (name)
 -- VALUES ('ham');
---
+
 -- INSERT INTO toppings (name)
 -- VALUES ('pineapple');
 -- --
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('2', '3');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('2', '3');
 
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('3', '3');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('3', '3');
 
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('3', '4');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('3', '4');
 
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('3', '5');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('3', '5');
 
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('3', '6');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('3', '6');
 
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('1', '5');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('1', '5');
 
-INSERT INTO pizzas_toppings (pizza_id, topping_id)
-VALUES ('1', '6');
+-- INSERT INTO pizzas_toppings (pizza_id, topping_id)
+-- VALUES ('1', '6');
 
+SELECT pizzas.name, toppings.name 
+FROM pizzas 
+JOIN pizzas_toppings 
+ON pizzas_toppings.pizza_id = pizzas.id
+JOIN toppings 
+ON pizzas_toppings.topping_id = toppings.id;
 
+-- WHERE pizzas.name='hawaiian';
 
 
 

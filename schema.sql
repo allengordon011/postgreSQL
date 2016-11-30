@@ -6,10 +6,10 @@
 --
 -- INSERT INTO recipes (name, description)
 -- VALUES ('Khichidi Kadhi', 'Rice and lentils with a yoghurt gravy');
---
+
 -- INSERT INTO recipes (name, description)
 -- VALUES ('Pizza', 'Cheese and marinara on dough');
---
+
 -- INSERT INTO recipes (name, description)
 -- VALUES ('Macaroni and Cheese', 'Pasta, cheddar cheese and milk');
 
@@ -33,4 +33,25 @@
 -- 	tag TEXT NOT NULL
 -- );
 
--- DROP TABLE tags;
+-- DROP TABLE steps;
+
+-- CREATE TABLE IF NOT EXISTS pizzaRecipeSteps (
+-- 	id SERIAL PRIMARY KEY,
+-- 	step TEXT NOT NULL,
+-- 	recipes_id INTEGER REFERENCES recipes
+-- );
+
+INSERT INTO pizzaRecipeSteps (step)
+VALUES ('Make pizza dough');
+
+INSERT INTO pizzaRecipeSteps (step)
+VALUES ('Add sauce');
+
+INSERT INTO pizzaRecipeSteps (step)
+VALUES ('Add cheese');
+
+INSERT INTO pizzaRecipeSteps (step)
+VALUES ('Add toppings');
+
+INSERT INTO pizzaRecipeSteps (step)
+VALUES ('Bake at 500 degrees F');
